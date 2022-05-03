@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to right,pink,#db70938c),url(./d-bg.jpg);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.countdown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    height: 100px;
+    background-color: pink;
+    border: 2px solid palevioletred;
+    border-radius: 5px;
+}
+.timeleft{
+    height: 80%;
+    width: 20%;
+    background-color: palevioletred;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.timeleft-title{
+    text-transform: uppercase;
+}
+#demo{
+    border: 2px solid palevioletred;
+    padding: 2px;
+}
+.card{
+    width: 500px;
+    height: 500px;
+    background: url(./b_bg.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid palevioletred;
+}
+.card img{
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid palevioletred;
+}
+@media only screen and (max-width: 600px) {
+   .container{
+       background-image: url(./m-bg.jpg);
+   }
+  }

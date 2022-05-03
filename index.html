@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c40a62bd0d.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./img/favicon_io/favicon.ico" type="image/x-icon">
+    <title>🥳 Happy Birthday Anjali Sinha 🥳</title>
+    <link rel="stylesheet" href="./birthday.css">
+</head>
+
+<body>
+    <div class="container">
+    
+        <div id="demo">
+            <img src="./cd.jpg" alt="">
+        </div>
+        <div class="countdown">
+            
+        </div>
+        
+    </div>
+</body>
+<script>
+    var deadline = new Date("May 4, 2022 00:00:00").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var t = deadline - now;
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((t % (1000 * 60)) / 1000);
+        document.querySelector('.countdown').innerHTML = 
+            `<div class="dayleft timeleft">${days}
+                <span class="timeleft-title">Days</span>
+            </div>
+            <div class="hourleft timeleft">${hours}
+                <span class="timeleft-title">Hours</span>
+            </div>
+            <div class="minleft timeleft">${minutes}
+                <span class="timeleft-title">Minutes</span>
+            </div>
+            <div class="secleft timeleft">${seconds}
+                <span class="timeleft-title">Seconds</span>
+            </div>`;
+        if (t <= 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = `<div class="card">
+                <img src="./pic.JPG" alt="">
+                
+            </div>`;
+            document.querySelector('.container').insertAdjacentHTML('beforeend',`<embed src="hbd_mp3.mp3" loop="true" autostart="true" width="2" height="0">`);
+
+                document.querySelector('.countdown').innerHTML = `It's Anjali Birthday 🥳`;
+        }
+    }, 1000);
+</script>
+
+</html>
