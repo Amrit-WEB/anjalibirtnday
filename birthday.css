@@ -60,4 +60,14 @@
    .container{
        background-image: url(./m-bg.jpg);
    }
+    #demo img{
+       width: 250px;
+       height: 250px;
+   }
+   .card{
+       width: 300px
+   }
+   .countdown{
+       width: 90%;
+   }
   }
